@@ -1,12 +1,12 @@
 /**
  * Usage, according to documentation(http://www.hobbywing.com/uploadfiles/sx/file/manual/HW-01-V4.pdf) : 
- *     Power up your Arduino, then type 1 to send max throttle to every ESC.
- *     Power up your ESCs.
- *     1. You must hear a beep1 beep2 beep3 sounds meaning the ESC is powered up
- *     2. After 2sec, you must hear beep beep, meaning that max throttle has been stored
- *     3. Type 0 to send 0 throttle
- *     4. You must hear one long beep meaning that min throttle has been stored.
- *     5. Type 2 to launch test function. This will send 0 to 180 throttle to ESCs to test them.
+ *     1. Power up your Arduino, open terminal, then type 1 to send max throttle to every ESC to enter programming mode
+ *     2. Power up your ESCs. You must hear "beep1 beep2 beep3" tones meaning the power supply is OK
+ *     3. After 2sec, "beep beep" tone emits, meaning the throttle highest point has been correctly confirmed
+ *     4. Type 0 to send 0 throttle
+ *     5. Several "beep" tones emits, wich means the quantity of the lithium battery cells
+ *     6. A long beep tone emits meaning the throttle lowest point has been correctly confirmed
+ *     7. Type 2 to launch test function. This will send 0 to 180 throttle to ESCs to test them
  */
 
 #include <Servo.h>
@@ -20,7 +20,7 @@ char data;
 void setup() {
     Serial.begin(9600);
     
-    motA.attach(4, 1000, 2000);
+    motA.attach(4, 1000, 2000); // 1000 and 2000 are very important ! Values can be different with other ESCs.
     motB.attach(5, 1000, 2000);
     motC.attach(6, 1000, 2000);
     motD.attach(7, 1000, 2000);

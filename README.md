@@ -1,12 +1,25 @@
 # Introduction
-This project provides an Arduino sketch to calibrate Electrical Speed Controllers (ESC).
+This project provides an Arduino sketch to calibrate up to 4 Electrical Speed Controllers (ESC) at the same time. Feel free to update this sketch if you need to calibrate more than 4 ESCs.
 ESC are used to control brushless motors.
 This sketch is based on the Servo library (https://www.arduino.cc/en/Reference/Servo) that allows controling servo-motors sending them a PPM (Pulse Position Modulation) command.
 
 This sketch was written according to the HobbyKin ESC documentation : http://www.hobbywing.com/uploadfiles/sx/file/manual/HW-01-V4.pdf
 
+
+
 # Cabling
-TODO
+## Motor to ESC
+Connect each motor (3 wires) to its ESC. The way of wiring doesn't matter : brushless motors are like 3-phased motors, thus it only affects the direction of rotation. For calibration step, direction of rotation is not important.
+
+## Arduino to ESCs
+Connect each ESC's ground to the Arduino's ground to make all having common ground.
+Most of the time, ESC's command wire is white, then connect them as following : 
+ - First ESC to Arduino pin 4
+ - Second ESC to Arduino pin 5
+ - Third ESC to Arduino pin 6 
+ - Last ESC to Arduino pin 7
+    
+(i) If you don't want to calibrate all ESCs at the time, you're free to connect them one by one and run the Arduino sketch, it doesn't make any difference.
 
 # Usage
 After having uploaded sketch on your Arduino and having ESCs NOT powered up yet :

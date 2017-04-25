@@ -21,7 +21,7 @@ Most of the time, ESC's command wire is white, then connect them as following :
     
 (i) If you don't want to calibrate all ESCs at the time, you're free to connect them one by one and run the Arduino sketch, it doesn't make any difference.
 
-````
+```
 Connection example for one ESC.
 
 +---------------------+                            +---------------------+               

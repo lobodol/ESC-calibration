@@ -3,8 +3,7 @@ This project provides an Arduino sketch to calibrate up to 4 Electrical Speed Co
 ESC are used to control brushless motors.
 This sketch is based on the Servo library (https://www.arduino.cc/en/Reference/Servo) that allows controling servo-motors sending them a PPM (Pulse Position Modulation) command.
 
-This sketch was written according to the HobbyKin ESC documentation : http://www.hobbywing.com/uploadfiles/sx/file/manual/HW-01-V4.pdf
-
+This sketch was written according to the HobbyKin ESC documentation : https://www.firediy.fr/files/drone/HW-01-V4.pdf
 
 
 # Cabling

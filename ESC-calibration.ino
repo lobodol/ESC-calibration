@@ -1,5 +1,5 @@
 /**
- * Usage, according to documentation(http://www.hobbywing.com/uploadfiles/sx/file/manual/HW-01-V4.pdf) : 
+ * Usage, according to documentation(https://www.firediy.fr/files/drone/HW-01-V4.pdf) : 
  *     1. Plug your Arduino to your computer with USB cable, open terminal, then type 1 to send max throttle to every ESC to enter programming mode
  *     2. Power up your ESCs. You must hear "beep1 beep2 beep3" tones meaning the power supply is OK
  *     3. After 2sec, "beep beep" tone emits, meaning the throttle highest point has been correctly confirmed

@@ -5,6 +5,7 @@ This sketch is based on the Servo library (https://www.arduino.cc/en/Reference/S
 
 This sketch was written according to the HobbyKin ESC documentation : https://www.firediy.fr/files/drone/HW-01-V4.pdf
 
+A detailed tutorial is available here (in french): https://www.firediy.fr/article/calibrer-ses-esc-avec-un-arduino-drone-ch-3
 
 # Cabling
 ## Motor to ESC

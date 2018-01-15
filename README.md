@@ -12,6 +12,8 @@ A detailed tutorial is available here (in french): https://www.firediy.fr/articl
 ## 2.1 Motor to ESC
 Connect each motor (3 wires) to its ESC. The way of wiring doesn't matter : brushless motors are like 3-phased motors, thus it only affects the direction of rotation. For calibration step, direction of rotation is not important.
 
+:warning: Do NOT place propellers on motors if you care about your fingers !
+
 ## 2.2 Arduino to ESCs
 Connect each ESC's ground to the Arduino's ground to make all having common ground.
 Most of the time, ESC's command wire is white, then connect them as following : 

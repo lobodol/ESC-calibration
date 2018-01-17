@@ -2,11 +2,11 @@
 This project provides an Arduino sketch to calibrate up to 4 Electrical Speed Controllers (ESC) at the same time. Feel free to update this sketch if you need to calibrate more than 4 ESCs.
 
 ESC are used to control brushless motors.
-This sketch is based on the [Servo library](https://www.arduino.cc/en/Reference/Servo) that allows controling servo-motors sending them a 50Hz servo-control signal (a particular kind of PWM).
+This sketch is based on the [Servo library](https://www.arduino.cc/en/Reference/Servo) that allows controling servo-motors sending them a 50Hz [servo-control](https://en.wikipedia.org/wiki/Servo_control) signal (a particular kind of PWM).
 
-This sketch was written according to the HobbyKin ESC documentation : https://www.firediy.fr/files/drone/HW-01-V4.pdf
+This sketch was written according to the [HobbyKing ESC documentation](https://www.firediy.fr/files/drone/HW-01-V4.pdf)
 
-A detailed tutorial is available here (in french): https://www.firediy.fr/article/calibrer-ses-esc-avec-un-arduino-drone-ch-3
+A detailed tutorial is available [here](https://www.firediy.fr/article/calibrer-ses-esc-avec-un-arduino-drone-ch-3) (in french).
 
 # 2. Cabling
 ## 2.1 Motor to ESC

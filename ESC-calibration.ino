@@ -11,6 +11,9 @@
 
 #include <Servo.h>
 
+#define MIN_PULSE_LENGTH 1000 // Minimum pulse length in µs
+#define MAX_PULSE_LENGTH 2000 // Maximum pulse length in µs
+
 Servo motA, motB, motC, motD;
 char data;
 
@@ -20,10 +23,10 @@ char data;
 void setup() {
     Serial.begin(9600);
     
-    motA.attach(4, 1000, 2000); // 1000 and 2000 are very important ! Values can be different with other ESCs.
-    motB.attach(5, 1000, 2000);
-    motC.attach(6, 1000, 2000);
-    motD.attach(7, 1000, 2000);
+    motA.attach(4, MIN_PULSE_LENGTH, MAX_PULSE_LENGTH);
+    motB.attach(5, MIN_PULSE_LENGTH, MAX_PULSE_LENGTH);
+    motC.attach(6, MIN_PULSE_LENGTH, MAX_PULSE_LENGTH);
+    motD.attach(7, MIN_PULSE_LENGTH, MAX_PULSE_LENGTH);
     
     displayInstructions();
 }

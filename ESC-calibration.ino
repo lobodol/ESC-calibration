@@ -74,7 +74,7 @@ void loop() {
 }
 
 /**
- * Test function sending angle to the ESCs from 0 to 180 degrees
+ * Test function: send min throttle to max throttle to each ESC.
  */
 void test()
 {

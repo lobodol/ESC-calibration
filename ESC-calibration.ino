@@ -13,6 +13,7 @@
 // ---------------------------------------------------------------------------
 #include <Servo.h>
 // ---------------------------------------------------------------------------
+// Customize here pulse lengths as needed
 #define MIN_PULSE_LENGTH 1000 // Minimum pulse length in µs
 #define MAX_PULSE_LENGTH 2000 // Maximum pulse length in µs
 // ---------------------------------------------------------------------------

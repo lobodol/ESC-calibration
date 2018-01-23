@@ -6,7 +6,7 @@
  *     4. Type 0 to send min throttle
  *     5. Several "beep" tones emits, which means the quantity of the lithium battery cells (3 beeps for a 3 cells LiPo)
  *     6. A long beep tone emits meaning the throttle lowest point has been correctly confirmed
- *     7. Type 2 to launch test function. This will send 0 to 180 throttle to ESCs to test them
+ *     7. Type 2 to launch test function. This will send min to max throttle to ESCs to test them
  *
  * @author lobodol <grobodol@gmail.com>
  */
@@ -19,6 +19,7 @@
 Servo motA, motB, motC, motD;
 char data;
 // ---------------------------------------------------------------------------
+
 /**
  * Initialisation routine
  */
@@ -77,23 +78,23 @@ void loop() {
  */
 void test()
 {
-    for (int i=0; i<=180; i++) {
-        Serial.print("Speed = ");
+    for (int i = MIN_PULSE_LENGTH; i <= MAX_PULSE_LENGTH; i += 5) {
+        Serial.print("Pulse length = ");
         Serial.println(i);
         
-        motA.write(i);
-        motB.write(i);
-        motC.write(i);
-        motD.write(i);
+        motA.writeMicroseconds(i);
+        motB.writeMicroseconds(i);
+        motC.writeMicroseconds(i);
+        motD.writeMicroseconds(i);
         
         delay(200);
     }
 
     Serial.println("STOP");
-    motA.write(0);
-    motB.write(0);
-    motC.write(0);
-    motD.write(0);
+    motA.writeMicroseconds(MIN_PULSE_LENGTH);
+    motB.writeMicroseconds(MIN_PULSE_LENGTH);
+    motC.writeMicroseconds(MIN_PULSE_LENGTH);
+    motD.writeMicroseconds(MIN_PULSE_LENGTH);
 }
 
 /**
@@ -102,8 +103,8 @@ void test()
 void displayInstructions()
 {  
     Serial.println("READY - PLEASE SEND INSTRUCTIONS AS FOLLOWING :");
-    Serial.println("\t0 : Sends min throttle");
-    Serial.println("\t1 : Sends max throttle");
-    Serial.println("\t2 : Runs test function\n");
+    Serial.println("\t0 : Send min throttle");
+    Serial.println("\t1 : Send max throttle");
+    Serial.println("\t2 : Run test function\n");
 }
 

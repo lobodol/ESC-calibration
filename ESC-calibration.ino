@@ -3,20 +3,22 @@
  *     1. Plug your Arduino to your computer with USB cable, open terminal, then type 1 to send max throttle to every ESC to enter programming mode
  *     2. Power up your ESCs. You must hear "beep1 beep2 beep3" tones meaning the power supply is OK
  *     3. After 2sec, "beep beep" tone emits, meaning the throttle highest point has been correctly confirmed
- *     4. Type 0 to send 0 throttle
- *     5. Several "beep" tones emits, wich means the quantity of the lithium battery cells (3 beeps for a 3 cells LiPo)
+ *     4. Type 0 to send min throttle
+ *     5. Several "beep" tones emits, which means the quantity of the lithium battery cells (3 beeps for a 3 cells LiPo)
  *     6. A long beep tone emits meaning the throttle lowest point has been correctly confirmed
  *     7. Type 2 to launch test function. This will send 0 to 180 throttle to ESCs to test them
+ *
+ * @author lobodol <grobodol@gmail.com>
  */
-
+// ---------------------------------------------------------------------------
 #include <Servo.h>
-
+// ---------------------------------------------------------------------------
 #define MIN_PULSE_LENGTH 1000 // Minimum pulse length in µs
 #define MAX_PULSE_LENGTH 2000 // Maximum pulse length in µs
-
+// ---------------------------------------------------------------------------
 Servo motA, motB, motC, motD;
 char data;
-
+// ---------------------------------------------------------------------------
 /**
  * Initialisation routine
  */
@@ -40,19 +42,19 @@ void loop() {
 
         switch (data) {
             // 0
-            case 48 : Serial.println("Sending 0 throttle");
-                      motA.write(0);
-                      motB.write(0);
-                      motC.write(0);
-                      motD.write(0);
+            case 48 : Serial.println("Sending minimum throttle");
+                      motA.writeMicroseconds(MIN_PULSE_LENGTH);
+                      motB.writeMicroseconds(MIN_PULSE_LENGTH);
+                      motC.writeMicroseconds(MIN_PULSE_LENGTH);
+                      motD.writeMicroseconds(MIN_PULSE_LENGTH);
             break;
 
             // 1
-            case 49 : Serial.println("Sending 180 throttle");
-                      motA.write(180);
-                      motB.write(180);
-                      motC.write(180);
-                      motD.write(180);
+            case 49 : Serial.println("Sending maximum throttle");
+                      motA.writeMicroseconds(MAX_PULSE_LENGTH);
+                      motB.writeMicroseconds(MAX_PULSE_LENGTH);
+                      motC.writeMicroseconds(MAX_PULSE_LENGTH);
+                      motD.writeMicroseconds(MAX_PULSE_LENGTH);
             break;
 
             // 2
@@ -100,8 +102,8 @@ void test()
 void displayInstructions()
 {  
     Serial.println("READY - PLEASE SEND INSTRUCTIONS AS FOLLOWING :");
-    Serial.println("\t0 : Sends 0 throttle");
-    Serial.println("\t1 : Sends 180 throttle");
+    Serial.println("\t0 : Sends min throttle");
+    Serial.println("\t1 : Sends max throttle");
     Serial.println("\t2 : Runs test function\n");
 }
 

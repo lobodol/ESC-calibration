@@ -3,6 +3,7 @@ This project provides an Arduino sketch to calibrate up to 4 Electrical Speed Co
 
 ESC are used to control brushless motors.
 This sketch is based on the [Servo library](https://www.arduino.cc/en/Reference/Servo) that allows controling servo-motors sending them a 50Hz [servo-control](https://en.wikipedia.org/wiki/Servo_control) signal (a particular kind of PWM).
+Generated pulses length are about 1000µs to 2000µs. Feel free to edit pulses length according to your needs.
 
 This sketch was written according to the [HobbyKing ESC documentation](https://www.firediy.fr/files/drone/HW-01-V4.pdf)
 

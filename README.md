@@ -39,4 +39,4 @@ This will send max throttle to each ESC in order to make them enter programming 
 5. Several "beep" tones emits, wich means the quantity of the lithium battery cells (3 beeps for a 3 cells LiPo).
 6. A long beep tone emits meaning the throttle lowest point has been correctly confirmed.
 Your ESC's are now well calibrated and ready for test.
-7. Type :two: to launch test function. This will send 0 to 180 throttle to ESCs : you must see your motors starting to run with increasing speed.
+7. Type :two: to launch test function. This will send 0 to max throttle to ESCs : you must see your motors starting to run with increasing speed, then stop when maximum speed is reached.

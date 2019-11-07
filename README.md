@@ -31,7 +31,7 @@ Most of the time, ESC's command wire is white, then connect them as following :
 :warning: The Arduino will be powered by USB cable. Do not power the Arduino with the BEC output of an ESC to prevent any damage.
 
 # 3. Usage
-After having uploaded sketch on your Arduino and having ESCs NOT powered up yet :
+After having uploaded sketch on your Arduino and having ESCs **not powered up yet** :
 
 1. Plug your Arduino to your computer with USB cable, open terminal, then type :one:.
 This will send max throttle to each ESC in order to make them enter programming mode.

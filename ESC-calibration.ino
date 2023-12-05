@@ -7,8 +7,6 @@
  *     5. Several "beep" tones emits, which means the quantity of the lithium battery cells (3 beeps for a 3 cells LiPo)
  *     6. A long beep tone emits meaning the throttle lowest point has been correctly confirmed
  *     7. Type 2 to launch test function. This will send min to max throttle to ESCs to test them
- *
- * @author lobodol <grobodol@gmail.com>
  */
 // ---------------------------------------------------------------------------
 #include <Servo.h>
